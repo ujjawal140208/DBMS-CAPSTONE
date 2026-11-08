@@ -1,0 +1,3 @@
+import { useLocation } from 'react-router-dom';
+const names={'/':'Overview','/patients':'Patients','/doctors':'Doctors','/departments':'Departments','/appointments':'Appointments','/prescriptions':'Prescriptions','/medicines':'Medicines','/lab-tests':'Laboratory tests','/billing':'Billing','/payments':'Payments'};
+export default function Navbar(){const location=useLocation();return <header className="topbar"><div><div className="crumb">HOSPITAL MANAGEMENT / <b>{names[location.pathname]||'Page'}</b></div><h1>{names[location.pathname]||'Page'}</h1></div><div className="profile"><div className="avatar">AD</div><div><strong>Admin Desk</strong><small>Hospital administrator</small></div></div></header>}
